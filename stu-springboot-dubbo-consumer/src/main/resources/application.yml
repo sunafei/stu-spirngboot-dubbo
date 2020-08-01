@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+dubbo:
+  application:
+    name: stu-springboot-dubbo-consumer
+  registry:
+    address: zookeeper://172.16.1.5:2181
+  consumer:
+    retries: 2
+    timeout: 2000

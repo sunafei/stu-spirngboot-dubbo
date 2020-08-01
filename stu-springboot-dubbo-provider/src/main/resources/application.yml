@@ -1,0 +1,11 @@
+dubbo:
+  application:
+    name: stu-springboot-dubbo-provider
+  registry:
+    address: zookeeper://172.16.1.5:2181
+  protocol:
+    port: 20880
+  provider:
+    retries: 2
+    timeout: 2000
+    version: 1.0.0
