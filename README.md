@@ -17,7 +17,7 @@ docker run -d -p 8083:8080 -e dubbo.registry.address=zookeeper://172.16.1.5:2181
 2. 启动ConsumerApplication
 3. curl -i -X GET 'http://localhost:8081/getUserInfo?uid=1' 
 #### dubbo基本概念
-![ji](dubbo.png)
+![dubbo.png](dubbo.png)
 * 服务提供者（Provider）：暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务。  
 * 服务消费者（Consumer）: 调用远程服务的服务消费方，服务消费者在启动时，向注册中心订阅自己所需的服务，服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。
 * 注册中心（Registry）：注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者
